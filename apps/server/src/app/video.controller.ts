@@ -4,8 +4,11 @@ import {
   Get,
   Param,
   Response,
+  UseGuards,
 } from '@nestjs/common';
 import { Response as Res } from 'express';
+
+import { BearerAuthGuard } from '@yt-downloader/auth';
 
 import { VideoService } from './video.service';
 
@@ -23,12 +26,14 @@ export class VideoController {
   }
 
   @Get(':id/info')
+  @UseGuards(BearerAuthGuard)
   async getVideoInfo (@Param('id') id: string) {
     this.validateVideoId(id);
     return this.videoService.getVideoInfo(id);
   }
 
   @Get(':id/download')
+  @UseGuards(BearerAuthGuard)
   async downloadVideo(@Param('id') id: string, @Response() res: Res) {
     this.validateVideoId(id);
 
