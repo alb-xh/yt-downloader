@@ -11,7 +11,6 @@ export class AuthService {
   }
 
   validateToken (token: string): boolean {
-    console.log(token, this.apiTokens);
     return this.apiTokens.includes(token);
   }
 }
