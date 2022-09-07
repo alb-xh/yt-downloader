@@ -6,11 +6,13 @@ import {
   Response,
   UseGuards,
 } from '@nestjs/common';
+import * as path from 'path';
 import { Response as Res } from 'express';
 
 import { BearerAuthGuard } from '@yt-downloader/auth';
 
 import { VideoService } from './video.service';
+import { DOWNLOADER_LOCATION } from './constants';
 
 @Controller({
   path: 'video',
@@ -49,5 +51,11 @@ export class VideoController {
         'Content-Length': contentLength,
       })
     );
+  }
+
+  @Get('downloader')
+  getDownloader(@Response() res: Res) {
+    const fileLocation = path.resolve(DOWNLOADER_LOCATION)
+    res.sendFile(fileLocation);
   }
 }
