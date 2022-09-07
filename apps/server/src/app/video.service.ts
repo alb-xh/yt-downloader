@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 import {
   VIDEO_FORMAT,
   VIDEO_QUALITY,
-} from './constants';
+} from '../constants';
 
 @Injectable()
 export class VideoService {
