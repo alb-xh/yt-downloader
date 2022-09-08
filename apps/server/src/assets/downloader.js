@@ -8,7 +8,7 @@
 
 const APP_NAME = 'YT Downloader';
 const SLEEP_BEFORE_EXECUTION = 5000;
-const SERVER_BASE_URL = 'http://localhost:3333/api';
+const SERVER_BASE_URL = 'http://yt-downloader.apps.albanoxhafaj.com/api';
 const TOKEN_LOCAL_STORAGE_KEY = 'yt-downloader-token';
 const APPEND_AFTER_SELECTOR = '#sort-menu';
 const DOWNLOAD_BUTTON_TEXT = 'SHKARKO';
