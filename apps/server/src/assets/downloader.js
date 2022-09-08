@@ -6,7 +6,7 @@
 // @grant        none
 // ==/UserScript==
 
-const SERVER_BASE_URL = 'http://yt-downloader.apps.albanoxhafaj.com/api'
+const SERVER_BASE_URL = 'https://yt-downloader.apps.albanoxhafaj.com/api'
 const APP_NAME = 'YT Downloader';
 const SLEEP_BEFORE_EXECUTION = 5000;;
 const TOKEN_LOCAL_STORAGE_KEY = 'yt-downloader-token';
