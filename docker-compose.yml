@@ -3,7 +3,7 @@ version: '3'
 services:
   reverse-proxy:
     image: nginx:alpine
-    container_name: recs-reverse-proxy
+    container_name: reverse-proxy
     network_mode: "host"
     ports:
       - "80:80"
