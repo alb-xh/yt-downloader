@@ -160,7 +160,7 @@ const run = async () => {
 
   let token = tokenStorage.get();
   if (!token) {
-    const token = popups.prompt("Fute fjalen sekrete");
+    token = popups.prompt("Fute fjalen sekrete");
     if (!token) {
       popups.alert('Nuk percaktove fjalen sekrete!');
       throw new Error('Token was not provided!');
